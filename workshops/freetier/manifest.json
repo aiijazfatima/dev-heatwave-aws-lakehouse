@@ -9,8 +9,8 @@
         },
 
         {
-            "title": "Lab 1: Create MySQL HeatWave and Cluster",
-            "filename": "../../create-dbs/create-dbs.md"
+            "title": "Lab 1: Launch a Starter DB System",
+            "filename": "../../launch-starter-dbs/launch-starter-dbs.md"
         },
 
         {

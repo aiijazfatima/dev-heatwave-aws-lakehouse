@@ -1,4 +1,4 @@
-# Create Heatwave DB System  and add a HeatWave Cluster
+# Launch a starter DB system
 
 ## Introduction
 
