@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Get started with HeatWave On AWS Lakehouse",
+  "workshoptitle": "Get started with HeatWave Lakehouse on AWS",
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
@@ -14,20 +14,24 @@
         },
 
         {
-          "title": "Lab 2: Connect to  and Load your MySQL HeatWave System",
-          "filename": "../../connect-load-dbs/connect-load-dbs.md"
+          "title": "Lab 2: Create Lakehouse Mapping",
+          "filename": "../../create-lakehouse-mapping/create-lakehouse-mapping.md"
         },
 
         {
-          "title": "Lab 3: Run queries in HeatWave",
+          "title": "Lab 3: Run Queries on HeatWave",
           "filename": "../../run-queries/run-queries.md"
         },
 
         {
-          "title": "Lab 4:Monitor HeatWave",
+          "title": "Lab 4: Monitor Performance",
           "filename": "../../monitor-heatwave/monitor-heatwave.md"
         },
 
+        {
+          "title": "Lab 5: (Bonus) Develop HeatWave App with LAMP",
+          "filename": "../../develop-apps/develop-apps.md"
+        },
 
         {
             "title": "Need Help?",

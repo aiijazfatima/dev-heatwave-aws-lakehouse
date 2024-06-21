@@ -1,16 +1,16 @@
 # Introduction
 
-HeatWave on AWS is a powerful data platform that supports Lakehouse. This capability enables you to query data in Amazon S3 in various file formats, such as CSV, Parquet, and Avro, and exports from databases like Aurora, Redshift, MySQL, and Oracle. With Lakehouse, you can now query up to a quarter of a petabyte of data in Amazon S3 and combine it with transactional data in MySQL databases without copying the data from S3 into the MySQL database. Furthermore, you can perform machine learning (ML) tasks, such as training, predictions, and explanations, on this data stored in S3. This eliminates the need to load data into a database or move it to a machine learning service. The speed of querying data in Amazon S3 is on par with that of querying the data in the database. 
+HeatWave Lakehouse on AWS brings industry-leading query performance on object storage data to AWS. With HeatWave Lakehouse you can now query data in Amazon S3 in various file formats, such as CSV, Parquet, Avro, JSON (Newline delimited), and exports from databases like Aurora, Redshift, MySQL, and Oracle. With Lakehouse, you can now query up to a quarter of a petabyte of data in Amazon S3 and combine it with transactional data in MySQL databases without copying the data from S3 into the MySQL database. Furthermore, you can perform machine learning (ML) tasks, such as training, inferences, and explanations, on this data stored in S3. This eliminates the need to load data into a database or move it to a machine learning service, thereby improving security, maintainability, and reducing complexity. The speed of querying data in Amazon S3 is on par with that of querying the data in the database.
 
-Lakehouse can scale up to 512 nodes, offering you the flexibility and power you need for your data and analytics tasks.
+HeatWave Lakehouse can scale up to 512 nodes on a single cluster, offering you the flexibility and power you need for your data and analytics tasks.
 
 
-![HeatWave on AWS deployment](./images/hwonaws_lakehouse.png "hw on aws lakehouse")
+![HeatWave on AWS deployment](./images/hwonaws_lakehouse.png "HeatWave Lakehouse on AWS")
 
 
 ## About this Workshop
 
-In this LiveLab, we will launch a starter DB System on HeatWave on AWS. Then, we will map the data in Amazon S3 to a new table in a schema on HeatWave on AWS. Subsequently, we will load the data into HeatWave to accelerate query processing. Finally, we will run queries on HeatWave and monitor the performance of the DB System and HeatWave Cluster.
+In this LiveLab, you will launch a starter HeatWave DB System on AWS. Then, you will map data in Amazon S3 to a new table in a schema on HeatWave on AWS. Subsequently, you will load the data into HeatWave to accelerate query processing. Finally, you will run queries on HeatWave and monitor the performance of the DB System and HeatWave Cluster
 
 _Estimated Time:_ 1.5 hours
 
@@ -23,7 +23,7 @@ Once the user signs up for an OCI cloud account and registers their OCI account 
 
 The following diagram illustrates HeatWave on AWS integration with Oracle Cloud Infrastructure (OCI).
 
-![HeatWave on AWS and OCI Integrationt](./images/mhds-hw-oci-integration.png "mhds hw oci integration")
+![HeatWave on AWS and OCI Integration](./images/mhds-hw-oci-integration.png "HeatWave on AWS and OCI Integration")
 
 ## Objectives
 
@@ -31,7 +31,6 @@ In this lab, you will be guided through the following steps:
 
 - Launch a starter DB system
 - Create Lakehouse mapping
-- Load data into HeatWave
 - Run queries on HeatWave
 - Monitor performance
 
