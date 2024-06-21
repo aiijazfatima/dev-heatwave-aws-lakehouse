@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The HeatWave console enables you to monitor the overall and per-node utilization of MySQL HeatWave hardware resources such as CPU, memory, and storage. It also provides a detailed breakdown of your resource consumption, such as data dictionary size, buffer pool size, and database connections.
+The HeatWave console enables you to monitor the overall and per-node utilization of HeatWave hardware resources such as CPU, memory, and storage. It also provides a detailed breakdown of your resource consumption, such as data dictionary size, buffer pool size, and database connections.
 
 _Estimated Time:_ 10 minutes
 
@@ -16,23 +16,21 @@ In this lab, you will be guided through the following task:
 
 ### Prerequisites
 
-- Must complete Lab 3.
+- Must complete Lab 4.
 
 ## Task 1: Monitor HeatWave Performance - Cluster
 
-You can monitor the HeatWave Cluster performance by performing the following steps:
+You can monitor the performance of both the HeatWave Cluster and MySQL nodes.
 
 1. Click the **Performance** tab.
 2. Click the **Cluster** tab.
-3. Select the DB System whose performance you want to monitor.
-
-    You can see performance data such as cluster memory utilization, node memory utilization, and buffer pool.
+3. Select the DB System whose performance you want to monitor. You can see performance data such as cluster memory utilization, node memory utilization, and buffer pool.
 
     ![Performance  monitor cluster](./images/1-performace-monitor-cluster.png "Performance  monitor cluster")
 
 ## Task 2: Monitor HeatWave Performance - Workload
 
-You can monitor the most recent queries that ran in HeatWave, allowing you to analyze when a query was executed, how long it took, and what the query actually does. Perform the following steps:
+You can monitor the most recent queries that ran in HeatWave, enabling you to analyze when a query was run, how long it took, and what the query actually does.
 
 1. Click the **Performance** tab.
 2. Click the **Workload** tab.

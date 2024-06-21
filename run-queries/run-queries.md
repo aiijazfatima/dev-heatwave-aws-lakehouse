@@ -2,7 +2,7 @@
 
 ## Introduction
 
-You can run queries on the data in Amazon S3 from the HeatWave console, without having to copy the data in the MySQL database. The performance of querying data in Amazon S3 is identical to the performance of querying data inside the database. The HeatWave console provides a Query Editor to ease your interaction with the DB system eliminating the need to go back and forth between the Console and an external MySQL client for resource and data management.
+HeatWave console provides a Query Editor to ease your interaction with the DB system eliminating the need to go back and forth between the Console and an external MySQL client for resource and data management.
 
 _Estimated Time:_ 10 minutes
 
@@ -10,41 +10,102 @@ _Estimated Time:_ 10 minutes
 
 In this lab, you will be guided through the following task:
 
-- Run queries with  HeatWave.
+- Connect to the Starter DB System.
+- Run queries with  HeatWave turned on.
+- Run queries with  HeatWave turned off.
+- Drop a table from the schema, airportdb.
 
 ### Prerequisites
 
-- Must complete Lab 2
+- Must complete Lab 1.
 
-## Task 1: Run queries with HeatWave
 
-1. In the **Workspaces** tab, click **Query Editor**. Under Database Objects, you can see the schemas and tables in the MySQL DB System, the associated table definitions, and the HeatWave load status of each table.
- 
-    ![Schema details](./images/1-heatwave-loaded-details.png "Schema details")
+## Task 1:  Connect to the Starter DB System
 
-2. Enter the following query in the query editor:
+1. Go to the **Workspaces tab**, and click **Connect to DB System**.
+   
+2. Select your DB System and enter the username and password you had created in Lab 1.
+    ![Connect Starter DB System](./images/1-connect-starter-db-system.png "Connect Starter DB System")
+
+3. In the **Query Editor** tab, you can see that the starter DB System contains the schemas, airportdb and tpch_1, already loaded into HeatWave.
+    ![Sample schemas](./images/2-sample-schemas.png "Sample schemas")
+
+## Task 2: Run queries with HeatWave turned on
+
+1. Click the **Query Editor** tab.
+
+2. Click **Sample Queries** and then click **Sample AirportDB Queries**.
+
+ ![Sample queries](./images/3-sample-queries.png "Sample queries")
+
+3. Copy Query 1, and click **Cancel**. 
+
+ ![Sample airportdb queries](./images/4-copy-sample-airportdb-queries.png "Sample airportdb queries")
+
+4. Paste the query in the **Query Editor**.
+
+5. Click **Run Query** to run the query.
+
+    When you run the query with HeatWave, it took only 0.1070 seconds.
+
+    ![Run query with HeatWave](./images/5-run-query.png "Run query with HeatWave")
+
+## Task 3: Run queries with HeatWave turned off
+
+Let us run the same query by turning off HeatWave to find out what query performance we get with HeatWave.
+
+1. Paste the following query in the **Query Editor**, and turn off HeatWave by clicking **Run Query**:
 
     ```bash
-    <copy>USE airportdb; 
-    SELECT booking.col_5, count(*) FROM booking WHERE booking.col_5 > 500 GROUP BY booking.col_5 ORDER BY booking.col_5 LIMIT 100;</copy> 
+    <copy>SET SESSION use_secondary_engine=OFF; </copy> 
     ```
 
-3. Click the **Run Query** button to run the query.
+2. Click **Sample Queries**, and then click **Sample AirportDB Queries**.
 
-    When you run the query with HeatWave, it took only 0.0279 seconds.
+ ![Sample queries](./images/3-sample-queries.png "Sample queries")
 
-    ![Run queries with HeatWave](./images/2-run-query.png "Run queries with HeatWave")
+3. Copy Query 1 again, and click **Cancel**. 
+
+ ![Sample airportdb queries](./images/4-copy-sample-airportdb-queries.png "Sample airportdb queries")
+
+4. Paste the query in the **Query Editor**, and click **Run Query**.
+
+5. When you run the query with HeatWave off, it took 0.1070 seconds. The query without HeatWave is x times slower.
+
+    ![Run query without HeatWave](./images/5-run-query.png "Run query without HeatWave")
+
+7. Turn HeatWave back on by running the following query in the **Query Editor**.
+
+    ```bash
+    <copy> 
+    SET SESSION use_secondary_engine=ON;
+    SHOW VARIABLES LIKE 'use_secondary_engine%';
+    </copy>
+    ```
+
+## Task 4: Drop a table from the schema, airportdb
+
+Let us drop the table, booking, from the schema, airportdb. We will use Lakehouse to map the table from an Oracle-managed S3 bucket.
+
+ 1. Drop the table,booking, from the schema, airportdb, by running the following query in the **Query Editor**. 
+
+    ```bash
+    <copy>use database airportdb;
+    drop table booking;</copy> 
+    ``` 
+    ![Drop table booking](./images/6-drop-table-booking.png "Drop table booking")
 
 You may now **proceed to the next lab**.
 
 ## Learn More
 
-- [MySQL HeatWave on AWS Service Guiden](https://dev.mysql.com/doc/heatwave-aws/en/)
+- [HeatWave on AWS Service Guide](https://dev.mysql.com/doc/heatwave-aws/en/)
 
-- [MySQL Database Documentation](https://dev.mysql.com/)
+- [MySQL Documentation](https://dev.mysql.com/)
 
 ## Acknowledgements
 
 - **Author** - Aijaz Fatima, Product Manager
 - **Contributors** - Mandy Pang, Senior Principal Product Manager
 - **Last Updated By/Date** - Aijaz Fatima, Product Manager, June 2024
+

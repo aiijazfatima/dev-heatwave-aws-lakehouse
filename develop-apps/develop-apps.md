@@ -4,7 +4,7 @@
 
 HeatWave can easily be used for developing new applications with LAMP or other software stacks.
 
-**Note:** This application code is intended for educational purposes only. It is designed to help developers learn and practice application development skills with HeatWave on AWS. The code is not designed to be used in a production environment
+**Note:** This application code is intended for educational purposes only. It is designed to help developers learn and practice application development skills with HeatWave on AWS. The code is not designed to be used in a production environment.
 
 _Estimated Lab Time:_ 20 minutes
 
@@ -12,97 +12,97 @@ _Estimated Lab Time:_ 20 minutes
 
 In this lab, you will be guided through the following tasks:
 
-- Install Apache and PHP
-- Create PHP / HeatWave Connect Application
-- Create LAMP WEB Application
+- Install Apache.
+- Install PHP.
+- Create PHP/HeatWave connect application.
+- Create LAMP WEB application.
 
 ### Prerequisites
 
-- An Oracle Trial or Paid Cloud Account
-- Some Experience with MySQL SQL and  PHP
-- Completed Lab 4
+- Some experience with MySQL SQL and PHP.
+- Completed Lab 5.
 
-## Task 1: Install App Server (APACHE)
+## Task 1: Install Apache (App Server)
 
 1. Connect to your compute instance. 
 
-2. Install app server
+2. Install app server.
 
-    a. Install Apache
+    a. Install Apache.
 
     ```bash
     <copy>sudo yum install httpd -y </copy>
     ```
 
-    b. Enable Apache
+    b. Enable Apache.
 
     ```bash
     <copy>sudo systemctl enable httpd</copy>
     ```
 
-    c. Start Apache
+    c. Start Apache.
 
     ```bash
     <copy>sudo systemctl restart httpd</copy>
     ```
 
-    d. Setup firewall
+    d. Setup firewall.
 
     ```bash
     <copy>sudo firewall-cmd --permanent --add-port=80/tcp</copy>
     ```
 
-    e. Reload firewall
+    e. Reload firewall.
 
     ```bash
     <copy>sudo firewall-cmd --reload</copy>
     ```
 
-3. From a browser test apache from your local machine using the Public IP Address of your compute instance.
+3. From a browser, test Apache from your local machine using the Public IP Address of your compute instance.
 
     **Example: http://129.213....**
 
 ## Task 2: Install PHP
 
-1. Install php:
+1. Install PHP.
 
-    a. Install php:7.4
+    a. Install PHP:7.4.
 
     ```bash
     <copy> sudo dnf module install php:7.4 -y</copy>
     ```
 
-    b. Install associated php libraries
+    b. Install associated PHP libraries.
 
     ```bash
     <copy>sudo yum install php-cli php-mysqlnd php-zip php-gd php-mbstring php-xml php-json -y</copy>
     ```
 
-    c. View  php / mysql libraries
+    c. View  PHP/MySQL libraries.
 
     ```bash
     <copy>php -m |grep mysql</copy>
     ```
 
-    d. View php version
+    d. View PHP version
 
     ```bash
     <copy>php -v</copy>
     ```
 
-    e. Restart Apache
+    e. Restart Apache.
 
     ```bash
     <copy>sudo systemctl restart httpd</copy>
     ```
 
-2. Create test php file (info.php)
+2. Create test PHP file (info.php).
 
     ```bash
     <copy>sudo nano /var/www/html/info.php</copy>
     ```
 
-3. Add the following code to the editor and save the file (ctr + o) (ctl + x)
+3. Add the following code to the editor and save the file (ctr + o) (ctl + x).
 
     ```bash
     <copy><?php
@@ -110,13 +110,13 @@ In this lab, you will be guided through the following tasks:
     ?></copy>
     ```
 
-4. From your local machine, browse the page info.php
+4. From your local machine, browse the page info.php.
 
    Example: http://129.213.167.../info.php
 
-## Task 3: Create HeatWave / PHP connect app
+## Task 3: Create PHP/HeatWave connect application
 
-1. Security update"   set SELinux to allow Apache to connect to MySQL
+1. Set SELinux to allow Apache to connect to HeatWave.
 
     ```bash
     <copy> sudo setsebool -P httpd_can_network_connect 1 </copy>
@@ -132,16 +132,16 @@ In this lab, you will be guided through the following tasks:
     <copy>sudo nano config.php</copy>
     ```
 
-3. Add the following code to the editor and save the file (ctr + o) (ctl + x)
+3. Add the following code to the editor and save the file (ctr + o) (ctl + x).
 
      ```bash
         <copy><?php
     // Database credentials
-    define('DB_SERVER', '10.0.1...');// MDS server IP address
+    define('DB_SERVER', '100.0.1...');// MySQL IP address
     define('DB_USERNAME', 'admin');
     define('DB_PASSWORD', 'Welcome#12345');
     define('DB_NAME', 'mysql_customer_orders');
-    //Attempt to connect to MySQL database
+    //Attempt to connect to MySQL Server
     $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
     // Check connection
     if($link === false){
@@ -156,7 +156,7 @@ In this lab, you will be guided through the following tasks:
 
     - Test Config.php on Web sever http://150.230..../config.php
 
-4. Create dbtest.php
+4. Create dbtest.php.
 
     ```bash
     <copy>cd /var/www/html</copy>
@@ -166,7 +166,7 @@ In this lab, you will be guided through the following tasks:
     <copy>sudo nano dbtest.php</copy>
     ```
 
-5. Add the following code to the editor and save the file (ctr + o) (ctl + x)
+5. Add the following code to the editor and save the file (ctr + o) (ctl + x).
 
     ```bash
     <copy>
@@ -195,7 +195,7 @@ In this lab, you will be guided through the following tasks:
     </copy>
     ```
 
-6. From your local  machine connect to dbtest.php
+6. From your local  machine connect to dbtest.php.
 
     Example: http://129.213.167..../dbtest.php  
 
@@ -203,7 +203,11 @@ In this lab, you will be guided through the following tasks:
 
 ## Learn More
 
-[HeatWave Lakehouse Documentation](https://dev.mysql.com/doc/heatwave/en/mys-hw-lakehouse.html)
+- [Heatwave on AWS Service Guide](https://dev.mysql.com/doc/heatwave-aws/en/)
+
+- [HeatWave Lakehouse Documentation](https://dev.mysql.com/doc/heatwave/en/mys-hw-lakehouse.html)
+
+- [MySQL Documentation](https://dev.mysql.com/)
 
 ## Acknowledgements
 

@@ -11,16 +11,15 @@ _Estimated Time:_ 15 minutes
 In this lab, you will be guided through the following tasks:
 
 - Enable Lakehouse on the HeatWave cluster.
-- Connect to the starter DB System.
-- Create Lakehouse Mapping.
+- Create Lakehouse mapping.
 
 ### Prerequisites
 
-- Must complete Lab 1.
+- Must complete Lab 2.
 
 ## Task 1:  Enable Lakehouse on the HeatWave cluster
 
-1. Go to the **HeatWave Cluster** tab in the [Heatwave Console](https://cloud.mysql.com).
+1. Go to the **HeatWave Clusters** tab in the [Heatwave Console](https://cloud.mysql.com).
 
 2. Select your HeatWave Cluster, and under **Actions**, Click **Enable Lakehouse**. 
     ![Enable Lakehouse](./images/1-enable-lakehouse.png "Enable Lakehouse")
@@ -28,38 +27,22 @@ In this lab, you will be guided through the following tasks:
 3. Under **HeatWave Cluster Details**, you can see that Lakehouse is enabled.
     ![Lakehouse enabled](./images/2-lakehouse-enabled.png "Lakehouse enabled")
 
-## Task 2:  Connect to the Starter DB System
+## Task 2: Create Lakehouse mapping
 
-1. Go to the **Workspace tab**, and click **Connect to DB System**.
-   
-2. Select your DB System and enter the username and password that you had created in Lab 1.
-    ![Connect Starter DB System](./images/3-connect-starter-db-system.png "Connect Starter DB System")
-
-3. In the **Query Editor** tab, you can see that the Starter DB System contains the airportdb and tpch_1 schemas, already loaded into HeatWave.
-    ![Sample schemas](./images/4-sample-schemas.png "Sample schemas")
-
-4. Drop the schema, airportdb by running the following query in the **Query Editor**. We will use Lakehouse to map the schema from an Oracle-managed S3 bucket.
-
-    ```bash
-    <copy>drop database airportdb;</copy> 
-    ``` 
-    ![Drop airportdb schema](./images/5-drop-airportdb.png "Drop airportdb schema")
-
-## Task 3: Create Lakehouse Mapping
-
-HeatWave Autopilot, a machine learning-powered automation, adaptively samples a small fraction of data in Amazon S3 and infers the number of columns, their data types, and their precision, creates the table definition, and also the script needed to load the table into HeatWave. This works on files that contain some metadata, like Parquet and Avro, but also on files that contain no metadata, like CSV.
+Lakehouse mappings enable you to perform analytics on the data in Amazon S3. 
 
 1. In the **Workspaces** tab, click **Manage Data in HeatWave**.
 
-2. Click **Lakehouse Mapping**.
+2. Click **Create Lakehouse Mapping**.
 
-3. Select **Use sample data**. This enables you to map sample tables present in the airportdb schema in Oracle-managed S3 bucket. 
+3. In the **Create Lakehouse Mapping** panel, under **Source**, select **Use sample data**. This enables you to map sample tables present in the Oracle-managed S3 bucket to HeatWave. 
 
-4. You can select any table from the drop down list, and rest of the details are populated automatically.
+4. Select the booking table from the drop down list, and rest of the details are populated automatically.
 
     ![Create Lakehouse mapping](./images/6-create-lakehouse-mapping.png "Create Lakehouse mapping")
 
-5. Select the **Load into HeatWave after creating Lakehouse mapping** checkbox to load data into HeatWave directly from the Amazon S3 bucket, and click **Create Lakehouse Mapping**. 
+5. Autopilot schema inference, a machine learning-powered automation, adaptively samples a small fraction of data in Amazon S3 and infers the number of columns, their data types, and their precision, creates the table definition, and also the script needed to load the table into HeatWave. This works on files that contain some metadata, like Parquet and Avro, and also on files that contain no metadata, like CSV.
+Select the **Load into HeatWave after creating Lakehouse mapping** checkbox to load data into HeatWave directly from the Amazon S3 bucket, and click **Create Lakehouse Mapping**. 
 
     ![Auto schema inference](./images/7-auto-schema-inference.png "Auto schema inference")
 
@@ -73,7 +56,9 @@ You may now **proceed to the next lab**.
 
 - [Heatwave on AWS Service Guide](https://dev.mysql.com/doc/heatwave-aws/en/)
 
-- [MySQL Database Documentation](https://dev.mysql.com/)
+- [HeatWave Lakehouse Documentation](https://dev.mysql.com/doc/heatwave/en/mys-hw-lakehouse.html)
+
+- [MySQL Documentation](https://dev.mysql.com/)
 
 
 ## Acknowledgements

@@ -14,22 +14,27 @@
         },
 
         {
-          "title": "Lab 2: Create Lakehouse Mapping",
-          "filename": "../../create-lakehouse-mapping/create-lakehouse-mapping.md"
-        },
-
-        {
-          "title": "Lab 3: Run Queries on HeatWave",
+          "title": "Lab 2: Run Queries on HeatWave",
           "filename": "../../run-queries/run-queries.md"
         },
 
         {
-          "title": "Lab 4: Monitor Performance",
+          "title": "Lab 3: Create Lakehouse Mapping",
+          "filename": "../../create-lakehouse-mapping/create-lakehouse-mapping.md"
+        },
+
+        {
+          "title": "Lab 4: Run Queries on HeatWave Using Lakehouse",
+          "filename": "../../run-queries-lakehouse/run-queries-lakehouse.md"
+        },
+
+        {
+          "title": "Lab 5: Monitor Performance",
           "filename": "../../monitor-heatwave/monitor-heatwave.md"
         },
 
         {
-          "title": "Lab 5: (Bonus) Develop HeatWave App with LAMP",
+          "title": "Lab 6: (Bonus) Develop HeatWave App with LAMP",
           "filename": "../../develop-apps/develop-apps.md"
         },
 
