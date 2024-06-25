@@ -90,7 +90,7 @@ Let us drop the table, booking, from the schema, airportdb. We will use Lakehous
  1. Drop the table,booking, from the schema, airportdb, by running the following query in the **Query Editor**. 
 
     ```bash
-    <copy>use database airportdb;
+    <copy>use airportdb;
     drop table booking;</copy> 
     ``` 
     ![Drop table booking](./images/6-drop-table-booking.png "Drop table booking")
@@ -99,7 +99,9 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-- [HeatWave on AWS Service Guide](https://dev.mysql.com/doc/heatwave-aws/en/)
+- [Heatwave on AWS Service Guide](https://dev.mysql.com/doc/heatwave-aws/en/)
+
+- [HeatWave Lakehouse Documentation](https://dev.mysql.com/doc/heatwave/en/mys-hw-lakehouse.html)
 
 - [MySQL Documentation](https://dev.mysql.com/)
 

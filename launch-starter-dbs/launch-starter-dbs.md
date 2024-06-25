@@ -64,6 +64,8 @@ You may now **proceed to the next lab**.
 
 - [Heatwave on AWS Service Guide](https://dev.mysql.com/doc/heatwave-aws/en/)
 
+- [HeatWave Lakehouse Documentation](https://dev.mysql.com/doc/heatwave/en/mys-hw-lakehouse.html)
+
 - [MySQL Documentation](https://dev.mysql.com/)
 
 

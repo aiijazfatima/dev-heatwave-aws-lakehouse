@@ -21,10 +21,11 @@ In this lab, you will be guided through the following tasks:
 
 - Some experience with MySQL SQL and PHP.
 - Completed Lab 5.
+- A compute instance. See [Launching Your First Linux Instance](https://docs.oracle.com/en-us/iaas/Content/GSG/Reference/overviewworkflow.htm). 
 
 ## Task 1: Install Apache (App Server)
 
-1. Connect to your compute instance. 
+1. Connect to your compute instance. See [Connecting to Your Instance](https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/testingconnection.htm).
 
 2. Install app server.
 
@@ -58,9 +59,13 @@ In this lab, you will be guided through the following tasks:
     <copy>sudo firewall-cmd --reload</copy>
     ```
 
-3. From a browser, test Apache from your local machine using the Public IP Address of your compute instance.
+3. From a browser, test Apache from your local machine using the Public IP Address of your compute instance. Ensure that the compute instance settings allows traffic from your local machine.
 
-    **Example: http://129.213....**
+    **Example: http://129.213...**
+
+4. On a successful connection, you should see a page similar to the following:
+
+    ![Apache output](./images/1-apache-server.png "Apache output")
 
 ## Task 2: Install PHP
 
@@ -84,7 +89,7 @@ In this lab, you will be guided through the following tasks:
     <copy>php -m |grep mysql</copy>
     ```
 
-    d. View PHP version
+    d. View PHP version.
 
     ```bash
     <copy>php -v</copy>
@@ -112,7 +117,11 @@ In this lab, you will be guided through the following tasks:
 
 4. From your local machine, browse the page info.php.
 
-   Example: http://129.213.167.../info.php
+   Example: http://129.213.../info.php
+
+    You should see a page similar to the following:
+
+    ![info.php output](./images/2-info-php.png "info.php output")
 
 ## Task 3: Create PHP/HeatWave connect application
 

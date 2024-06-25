@@ -46,6 +46,8 @@ Please make sure you can sign in to your HeatWave OCI Cloud Account. See [Sign U
 
 - [HeatWave on AWS Service Guide](https://dev.mysql.com/doc/heatwave-aws/en/)
 
+- [HeatWave Lakehouse Documentation](https://dev.mysql.com/doc/heatwave/en/mys-hw-lakehouse.html)
+
 - [MySQL Documentation](https://dev.mysql.com/)
 
 ## Acknowledgements
