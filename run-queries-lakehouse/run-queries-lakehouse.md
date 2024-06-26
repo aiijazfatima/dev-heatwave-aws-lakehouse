@@ -1,4 +1,4 @@
-# Run Queries on HeatWave Using Lakehosue
+# Run Queries with HeatWave Lakehosue
 
 ## Introduction
 
@@ -16,7 +16,7 @@ In this lab, you will be guided through the following task:
 
 - Must complete Lab 3.
 
-## Task 1: Run queries with HeatWave using Lakehouse
+## Task 1: Run queries with HeatWave Lakehouse
 
 1. In the **Workspaces** tab, click **Query Editor**. Under **Database Objects**, you can see the schemas and tables in the MySQL database, the associated table definitions, and the HeatWave load status of each table.
  
