@@ -81,7 +81,7 @@ Let us run the same query by turning off HeatWave to find out what query perform
     </copy>
     ```
 
-## Task 4: Drop a table from the schema, airportdb
+## Task 4: Drop a table from the schema
 
 Let us drop the table, <i>booking</i>, from the schema, <i>airportdb</i>. We will use Lakehouse to map the table from an Oracle-managed S3 bucket.
 
