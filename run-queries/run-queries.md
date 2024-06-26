@@ -13,7 +13,7 @@ In this lab, you will be guided through the following task:
 - Connect to the Starter DB System.
 - Run queries with  HeatWave turned on.
 - Run queries with  HeatWave turned off.
-- Drop a table from the schema, airportdb.
+- Drop a table from the schema.
 
 ### Prerequisites
 
