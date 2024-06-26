@@ -64,7 +64,7 @@ Let us run the same query by turning off HeatWave to find out what query perform
 
 3. Paste the query in the **Query Editor**.
 
-4. Add the following above Query 1, and click **Run Query**.
+4. Add the following above the sample query, and click **Run Query**.
 
      ```bash
     <copy>SET SESSION use_secondary_engine=OFF; </copy>
