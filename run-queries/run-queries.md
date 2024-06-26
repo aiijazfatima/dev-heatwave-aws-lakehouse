@@ -22,12 +22,12 @@ In this lab, you will be guided through the following task:
 
 ## Task 1:  Connect to the Starter DB System
 
-1. Go to the **Workspaces tab**, and click **Connect to DB System**.
+1. Go to the **Workspaces** tab, and click **Connect to DB System**.
    
 2. Select your DB System and enter the username and password you had created in Lab 1.
     ![Connect Starter DB System](./images/1-connect-starter-db-system.png "Connect Starter DB System")
 
-3. In the **Query Editor** tab, you can see that the starter DB System contains the schemas, airportdb and tpch_1, already loaded into HeatWave.
+3. In the **Query Editor** tab, you can see that the starter DB System contains the schemas, <i>airportdb</i> and <i>tpch_1</i>, already loaded into HeatWave.
     ![Sample schemas](./images/2-sample-schemas.png "Sample schemas")
 
 ## Task 2: Run queries with HeatWave turned on
@@ -48,7 +48,7 @@ In this lab, you will be guided through the following task:
 
     When you run the query with HeatWave, it took only 0.1070 seconds.
 
-    ![Run query with HeatWave](./images/5-run-query.png "Run query with HeatWave")
+    ![Run query with HeatWave](./images/5-run-query-heatwave-on.png "Run query with HeatWave")
 
 ## Task 3: Run queries with HeatWave turned off
 
@@ -57,8 +57,11 @@ Let us run the same query by turning off HeatWave to find out what query perform
 1. Paste the following query in the **Query Editor**, and turn off HeatWave by clicking **Run Query**:
 
     ```bash
-    <copy>SET SESSION use_secondary_engine=OFF; </copy> 
+    <copy>SET SESSION use_secondary_engine=OFF;
+    SHOW VARIABLES LIKE 'use_secondary_engine%'
+    </copy> 
     ```
+![Turn off HeatWave](./images/6-turn-heatwave-off.png "Turn off HeatWave")
 
 2. Click **Sample Queries**, and then click **Sample AirportDB Queries**.
 
@@ -72,7 +75,7 @@ Let us run the same query by turning off HeatWave to find out what query perform
 
 5. When you run the query with HeatWave off, it took 0.1070 seconds. The query without HeatWave is x times slower.
 
-    ![Run query without HeatWave](./images/5-run-query.png "Run query without HeatWave")
+    ![Run query without HeatWave](./images/7-run-query-heatwave-off.png "Run query without HeatWave")
 
 7. Turn HeatWave back on by running the following query in the **Query Editor**.
 
@@ -83,17 +86,17 @@ Let us run the same query by turning off HeatWave to find out what query perform
     </copy>
     ```
 
-## Task 4: Drop a table from the schema, airportdb
+## Task 4: Drop a table from the schema, <i>airportdb</i>
 
-Let us drop the table, booking, from the schema, airportdb. We will use Lakehouse to map the table from an Oracle-managed S3 bucket.
+Let us drop the table, <i>booking</i>, from the schema, <i>airportdb</i>. We will use Lakehouse to map the table from an Oracle-managed S3 bucket.
 
- 1. Drop the table,booking, from the schema, airportdb, by running the following query in the **Query Editor**. 
+ 1. Drop the table, <i>booking</i>, from the schema, <i>airportdb</i>, by running the following query in the **Query Editor**. 
 
     ```bash
     <copy>use airportdb;
     drop table booking;</copy> 
     ``` 
-    ![Drop table booking](./images/6-drop-table-booking.png "Drop table booking")
+    ![Drop table booking](./images/8-drop-table-booking.png "Drop table booking")
 
 You may now **proceed to the next lab**.
 

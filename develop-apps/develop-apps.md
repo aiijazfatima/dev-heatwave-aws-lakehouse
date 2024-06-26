@@ -107,7 +107,7 @@ In this lab, you will be guided through the following tasks:
     <copy>sudo nano /var/www/html/info.php</copy>
     ```
 
-3. Add the following code to the editor and save the file (ctr + o) (ctl + x).
+3. Add the following code to the editor and save the file (ctr + O) (ctl + X).
 
     ```bash
     <copy><?php
@@ -141,7 +141,7 @@ In this lab, you will be guided through the following tasks:
     <copy>sudo nano config.php</copy>
     ```
 
-3. Add the following code to the editor and save the file (ctr + o) (ctl + x).
+3. Add the following code to the editor and save the file (ctr + O) (ctl + X).
 
      ```bash
         <copy><?php

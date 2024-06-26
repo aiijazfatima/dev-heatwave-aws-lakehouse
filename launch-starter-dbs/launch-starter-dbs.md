@@ -42,7 +42,7 @@ Once you have signed in, launch a starter DB System.
 
     The DB System should be created in a few minutes.
 
-3. Once the DB system is created, click the name of the DB System to see the DB System details.
+3. Once the DB System is created, click the name of the DB System to see the details.
 
     ![Starter DB system details](./images/3-starter-db-system-details.png "Starter DB system details")
 
@@ -50,7 +50,7 @@ Once you have signed in, launch a starter DB System.
 
 You need to specify an IAM role with the correct policies and trust relationships to grant the HeatWave DB System access to the data in Amazon S3. This will provide enhanced security, making it suitable for enterprise production workloads.
 
-1. Click **Edit the Starter DB System** and choose **Sample Lakehouse role**. The sample Lakehouse role contains the necessary policies and permissions to help you with Lakehouse mapping. 
+1. Click **Edit DB System** and choose **Sample Lakehouse role**. The sample Lakehouse role contains the necessary policies and permissions to help you with Lakehouse mapping. 
 
     ![Starter DB system Lakehouse details](./images/4-lakehouse-arn.png "Starter DB system Lakehouse details")
 

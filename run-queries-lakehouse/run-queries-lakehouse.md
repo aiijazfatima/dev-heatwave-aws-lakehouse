@@ -18,22 +18,23 @@ In this lab, you will be guided through the following task:
 
 ## Task 1: Run queries with HeatWave using Lakehouse
 
-1. In the **Workspaces** tab, click **Query Editor**. Under **Database Objects**, you can see the schemas and tables in the MySQL DB System, the associated table definitions, and the HeatWave load status of each table.
+1. In the **Workspaces** tab, click **Query Editor**. Under **Database Objects**, you can see the schemas and tables in the MySQL database, the associated table definitions, and the HeatWave load status of each table.
  
     ![Schema details](./images/1-heatwave-loaded-details.png "Schema details")
 
-2. Enter the following query in the **Query Editor**:
+2. Click **Sample Queries**, and then click **Sample AirportDB Queries**.
 
-    ```bash
-    <copy>USE airportdb; 
-    SELECT booking.col_5, count(*) FROM booking WHERE booking.col_5 > 500 GROUP BY booking.col_5 ORDER BY booking.col_5 LIMIT 100;</copy> 
-    ```
+    ![Click sample query](./images/2-click-sample-query.png "Click sample query")
 
-3. Click **Run Query** to run the query.
+3. Copy Query 1, and click **Cancel**. 
 
-    When you run the query with HeatWave using Lakehouse, it took only 0.0279 seconds, which is at par with when you run the query from MySQL.
+    ![Copy sample airportdb query](./images/3-copy-sample-query.png "Copy sample airportdb query")
 
-    ![Run queries with HeatWave using Lakehouse](./images/2-run-query.png "Run queries with HeatWave using Lakehouse")
+4. Paste the query in the **Query Editor**, and click **Run Query**.
+
+5. When you run the query with HeatWave using Lakehouse, it took only 0.0274 seconds, which is at par with when you run the query from MySQL.
+
+    ![Run queries with HeatWave using Lakehouse](./images/4-run-query.png "Run queries with HeatWave using Lakehouse")
 
 You may now **proceed to the next lab**.
 
