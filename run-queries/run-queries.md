@@ -45,7 +45,7 @@ In this lab, you will be guided through the following task:
 
 5. Click **Run Query** to run the query.
 
-    When you run the query with HeatWave, it took only 0.1908 seconds.
+    When you run the query with HeatWave, it took only 0.0446 seconds.
 
     ![Run query with HeatWave](./images/5-run-query-heatwave-on.png "Run query with HeatWave")
 
